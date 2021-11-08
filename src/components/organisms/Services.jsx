@@ -4,7 +4,7 @@ import { Box, SimpleGrid, Heading, Text, Flex } from '@chakra-ui/layout'
 const Services = () => {
     return (
 <>
-<Box align="center" mb="10">
+<Box align="center" m={{base:"10", md:"0 10 "}}>
     <Heading m="10">Verizon services</Heading>
 
     <SimpleGrid columns={{base:"1", md:"3"}} spacing={10} maxW="1250px">
