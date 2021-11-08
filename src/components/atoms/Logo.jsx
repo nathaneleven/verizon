@@ -1,12 +1,11 @@
 import React from 'react'
-import { Image } from 'next/image'
-import { Box } from '@chakra-ui/layout'
+import { Box, Link } from '@chakra-ui/layout'
 
 const LogoHeader = () => {
   return (
     <>
-    <Box border="1px solid white" w="50%">
-      <img src="/verizon-logo.svg" />
+    <Box>
+      <Link href="/"><img src="/verizon-logo.svg" /></Link>
     </Box>
     </>
   )

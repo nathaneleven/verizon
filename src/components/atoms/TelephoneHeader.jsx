@@ -1,16 +1,14 @@
-import { Box } from '@chakra-ui/layout'
+import { Box, Link } from '@chakra-ui/layout'
 import { PhoneIcon } from '@chakra-ui/icons'
 import React from 'react'
 
 const TelephoneHeader = () => {
   return (
     <>
-    <Box border="1px solid white" display="flex" alignItems="center">
-      <Box>
-        <PhoneIcon color="#fff" />
-      </Box>
+    <Box display="flex" alignItems="center">
       <Box margin="5px" color="#FFF" fontWeight="700">
-        1 (833) 980-3434
+      <PhoneIcon mr="5px" color="#fff" /><Link href="tel:+18339803434" >
+1 (833) 980-3434</Link>
       </Box>
     </Box>
     </>
