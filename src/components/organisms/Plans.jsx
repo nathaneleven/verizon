@@ -5,6 +5,7 @@ import CallNowPhoneBt from '../atoms/CallNowPhoneBt'
 const Plans = () => {
     return (
 <>
+  {/*altura de 1000px é apenas figurativa para que entenda como devem funcionar as alturas dos planos*/}
 <Box align="center" h="1000px" m={{base:"10", md:"0 10 "}}>
     <Heading m="10">Pick your speed</Heading>
 
