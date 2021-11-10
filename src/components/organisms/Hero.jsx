@@ -1,14 +1,17 @@
 import React from 'react'
-import { Flex, Box, Heading, List, ListIcon, ListItem, Spacer, AspectRatio } from '@chakra-ui/layout'
+import { Flex, Box, Heading, List, ListIcon, ListItem, Spacer, AspectRatio, Stack } from '@chakra-ui/layout'
 import { CheckIcon } from '@chakra-ui/icons'
 import { Image } from '@chakra-ui/image'
 
 const Hero = () => {
     return (
         <>
-        <Flex align="center" direction={{base: "column-reverse", md: "row"}} pb="40px" >
-        <Box p="4">
-            <Heading as="h1" mb="24px" >
+        <Stack w="100%" justify="center" flexDirection={["column-reverse","column-reverse","column-reverse","column-reverse","row"]}>
+        {/*Retirei um flex e adicionei um box para facilitar o alinhamento*/}
+        <Box h="100%" w={["100%","100%","100%","100%","50%"]} m="auto">
+        {/*a width vai ser a responsável pelo alinamento da div de texto*/}
+        <Box p={["4","5","6","7","8"]}  w={["100%","80%","80%","70%","75%"]} m="auto">
+            <Heading as="h1" mb="24px">
             Verizon – Your high-speed Internet provider
             </Heading>
             <List spacing={2}>
@@ -26,12 +29,15 @@ const Hero = () => {
                 </ListItem>
             </List>
         </Box>
+        </Box>
         <Spacer/>
-        
-        <AspectRatio w={{base:"100%", md: "3xl"}} ratio={{base:3, md:6/4 }} >
-  <Image objectPosition={{base:"0 -34px", md:0}} borderRadius={{md: "0 0 0 70px"}} src="/hero-image-verizon.jpg" alt="Hero Image Verizon" />
+        {/*correção de breakpoints*/}
+        <Flex w={["100%","100%","100%","100%","50%"]} justify="flex-end">
+        <AspectRatio w={["100%","100%","100%","100%","3xl"]} mt={["-10px"]} mb={["10px","20px","30px","30px","50px"]} ratio={[3, 3, 3, 3, 6/4]} >
+            <Image objectPosition={["0 -34px","0 -40px","0 -50px","0 -60px", "0px"]} borderRadius={{md: "0 0 0 70px"}} src="/hero-image-verizon.jpg" alt="Hero Image Verizon" />
         </AspectRatio>
         </Flex>
+        </Stack>
         </>
     )
 }

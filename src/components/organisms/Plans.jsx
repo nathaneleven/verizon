@@ -5,14 +5,15 @@ import CallNowPhoneBt from '../atoms/CallNowPhoneBt'
 const Plans = () => {
     return (
 <>
-<Box align="center" m={{base:"10", md:"0 10 "}}>
+  {/*altura de 1000px é apenas figurativa para que entenda como devem funcionar as alturas dos planos*/}
+<Box align="center" h="1000px" m={{base:"10", md:"0 10 "}}>
     <Heading m="10">Pick your speed</Heading>
 
-    <SimpleGrid columns={{base:"1", md:"3"}} spacing={10} maxW="1250px">
-    <Flex bg="#F6F6F6" p="5" align="center" direction="column" >
+    <SimpleGrid h={"100%"} columns={{base:"1", md:"3"}} spacing={10} maxW="1250px">
+    <Flex bg="#F6F6F6" p="5" align="center"  justify="space-around" direction="column" >
       <Heading as="h3" fontSize="2xl">Gigabit Connection</Heading>
       <Text>Ideal for a virtually seamless entertainment experience. Up to 940/880 Mbps.</Text>
-
+      {/* As descrições vão seguir os dois modelos w/autopay e with description*/}
       <Flex align="start" direction="row" fontWeight="700">
         <Box fontSize="29px" mt="7px" >$</Box>
         <Box fontSize="94px" color="#ee0000" mt="-25px">89</Box>
